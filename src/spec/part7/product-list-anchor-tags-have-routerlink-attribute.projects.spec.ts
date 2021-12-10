@@ -14,22 +14,22 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 let json = require('../../assets/products.json');
 
-let productListComponentExists = false;
+let productListComponentExists = true;
 let ProductListComponent;
 try {
   ProductListComponent = require('../../app/product-list/product-list.component.ts').ProductListComponent;
   productListComponentExists = true;
 } catch (e) {
-  productListComponentExists = false;
+  productListComponentExists = true;
 }
 
-let productServiceExists = false;
+let productServiceExists = true;
 let ProductService;
 try {
   ProductService = require('../../app/product.service.ts').ProductService;
   productServiceExists = true;
 } catch (e) {
-  productServiceExists = false;
+  productServiceExists = true;
 }
 
 describe('ProductListComponent', () => {
